@@ -4,9 +4,15 @@ get '/' do
   'Hello'
 end
 
-#param
+
+#parameter in the link
 get '/hello/:name' do
   "Hello #{params['name']}!"
+end
+
+#access via param hash
+get '/hello/:name' do |n|
+  "Hello #{n}!"
 end
 
 post '/' do
